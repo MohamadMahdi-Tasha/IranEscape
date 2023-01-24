@@ -28,7 +28,75 @@ body:last-child {
 /*Styles*/
 :not(.ff-iran-sans-fa-num) {font-family: IRANSansX, sans-serif !important;}
 .ff-iran-sans-fa-num {font-family: IRANSansFaNum, sans-serif !important;}
+.header-link-list {gap: 40px;}
+.header-link {font-size: 16px;font-weight: 400;}
+.header-link:not(.active) {color: white;}
+.header-link.active {color: var(--my-red);position: relative;}
+.menu-opener-link-item {position: relative;}
+.select-city-btn {border: 1px solid #676C9C;border-radius: 8px}
+.fw-400 {font-weight: 400;}
+.fs-14 {font-size: 14px;}
+
+header {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: radial-gradient(73.53% 313.44% at 13.72% 49.63%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #3F4260;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    height: 100px;
+}
+
+.link-list-holder-header {
+    background-image: url('../img/header/img-links-holder-bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100px;
+    width: 700px;
+}
+
+.link-list-inner-holder {
+    top: 60%;
+    right: 8%;
+    width: 595px;
+}
+
+.header-link.active::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--my-red);
+    position: absolute;
+    transform: translateY(-25px);
+    box-shadow: 0 5px 15px var(--my-red);
+}
+
+.menu-opener-link-item .menu::before {
+    content: '';
+    position: absolute;
+    transform: translateY(-100%) translateX(-150%);
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--my-red);
+}
+
+.menu-opener-link-item .menu {
+    top: 130%;
+    position: absolute;
+    width: 200px;
+    background-color: var(--my-red);
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
 
 /*Hover,Active, ...*/
+.header-link.menu-opener:hover ~ .menu {
+    opacity: 1;
+    pointer-events: visible;
+}
 
 /*Media Query's*/

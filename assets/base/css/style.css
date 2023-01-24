@@ -87,6 +87,11 @@ header {
     right: 10px;
 }
 
+.city-select-btn {
+    border: 1px solid #676C9C;
+    font-size: 14px;
+}
+
 /*Hover,Active, ...*/
 .menu-toggler:focus svg {transform: rotate(180deg);}
 .menu-toggler:focus ~ .header-menu{opacity: 1;pointer-events: visible;}

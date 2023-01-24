@@ -1,1 +1,27 @@
 /*Codes By Mahdi Tasha*/
+/*Variables*/
+:root {
+    --my-red: #ED3455;
+    --my-american-blue: #3F4260;
+    --my-gunmetal: #2B2D42;
+}
+
+/*Defualt Styles*/
+a {text-decoration: none !important;}
+li,ol,ul {margin: 0 !important;padding: 0 !important;}
+h1,h2,h3,h4,h5,h6 {margin-bottom: 0 !important;}
+
+body {
+    
+}
+
+/*For Debugging*/
+body:last-child {
+    margin-bottom: 500vh;
+}
+
+/*Styles*/
+
+/*Hover,Active, ...*/
+
+/*Media Query's*/

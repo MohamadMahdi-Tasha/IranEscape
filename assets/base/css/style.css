@@ -33,6 +33,7 @@ body:last-child {
 .header-link.active {color: var(--my-red);}
 .header-link {font-size: 14px}
 .menu-toggler svg {transition: .3s;}
+.city-select-btn {border: 1px solid #676C9C;font-size: 14px;}
 
 header {
     background: radial-gradient(73.53% 313.44% at 13.72% 49.63%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #3F4260;
@@ -48,10 +49,11 @@ header {
     background-position: bottom;
     height: 100px;
     width: 700px;
+    z-index: 2;
 }
 
 .header-links-holders-inner-holder {
-    top: 60%;
+    top: 55%;
     left: 60px;
     right: 60px;
 }
@@ -60,7 +62,7 @@ header {
     content: '';
     width: 100%;
     height: 2px;
-    top: -26px;
+    top: -25px;
     background-color: var(--my-red);
     box-shadow: 0 10px 30px var(--my-red);
     position: absolute;
@@ -87,9 +89,18 @@ header {
     right: 10px;
 }
 
-.city-select-btn {
-    border: 1px solid #676C9C;
-    font-size: 14px;
+.search-btn-holder {
+    background-image: url('../img/header/img-search-btn-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100px;
+    width: 700px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-left: 3.5rem;
+    transform: translateY(-50%) translateX(-100px);
 }
 
 /*Hover,Active, ...*/

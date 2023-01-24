@@ -5,9 +5,12 @@
 
 /*Variables*/
 :root {
+    --my-yellow: #FFAC41;
     --my-red: #ED3455;
     --my-american-blue: #3F4260;
     --my-gunmetal: #2B2D42;
+    --my-dark-blue-gray: #676C9C;
+    --my-black-5: #A4A7C4;
 }
 
 /*Defualt Styles*/
@@ -33,13 +36,16 @@ body:last-child {
 .header-link.active {color: var(--my-red);}
 .header-link {font-size: 14px}
 .menu-toggler svg {transition: .3s;}
-.city-select-btn {border: 1px solid #676C9C;font-size: 14px;}
+.dark-blu-gray-btn {border: 1px solid var(--my-dark-blue-gray);font-size: 14px;}
+.text-my-yellow {color: var(--my-yellow);}
+.text-my-black-5 {color: var(--my-black-5);}
 
 header {
     background: radial-gradient(73.53% 313.44% at 13.72% 49.63%, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #3F4260;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
 .header-links-holder {
@@ -101,6 +107,12 @@ header {
     top: 0;
     padding-left: 3.5rem;
     transform: translateY(-50%) translateX(-100px);
+}
+
+.login-phone-holder  {
+    right: 100px;
+    top: -50px;
+    height: 100px;
 }
 
 /*Hover,Active, ...*/

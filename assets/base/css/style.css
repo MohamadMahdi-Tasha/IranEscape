@@ -1,4 +1,7 @@
 /*Codes By Mahdi Tasha*/
+/*Importing Font Css File*/
+@import "../font/iransSansX/font.css";
+
 /*Variables*/
 :root {
     --my-red: #ED3455;
@@ -14,6 +17,7 @@ h1,h2,h3,h4,h5,h6 {margin-bottom: 0 !important;}
 body {
     background-color: var(--my-gunmetal) !important;
     font-size: 14px;
+    font-family: IRANSansX, sans-serif !important;
 }
 
 /*For Debugging*/

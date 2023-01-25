@@ -1,10 +1,9 @@
 // Variables
 const firstSectRightSideSliderNextButton = document.querySelector('.first-sect-right-side-slider .next-slide-btn');
 const firstSectRightSideSliderPrevButton = document.querySelector('.first-sect-right-side-slider .prev-slide-btn');
-const firstSectRightSideSlider = new Swiper('.first-sect-right-side-slider', {
-    spaceBetween: 30,
-    autoplay: {delay: 5000,},
-})
+
+const firstSectRightSideSlider = new Swiper('.first-sect-right-side-slider', {spaceBetween: 30, autoplay: {delay: 5000,}})
+const firstSectLeftSideSlider = new Swiper('.first-sect-left-side-slider', {spaceBetween: 30, autoplay: {delay: 5000,}})
 
 // Adding Event Listener On Prev And Next Button That Listens To Click And Slides The Slider To Prev Or Next Slide
 firstSectRightSideSliderNextButton.addEventListener('click', () => firstSectRightSideSlider.slideNext())

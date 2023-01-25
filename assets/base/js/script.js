@@ -21,17 +21,22 @@ firstSectRightSideSlider.on('slideChange', () => {
     firstSectRightSideSliderPaginationItemActive.classList.remove('active');
     firstSectRightSideSliderPaginationItemToActive.classList.add('active');
 
-    // Checking If Current Index Of Slider Is 4 Then Remove Class Of 'active' From 'firstSectRightSideSliderNextButton'
+    // Checking If Current Index Of Slider Is 4 Then Remove Class Of 'active' From 'firstSectRightSideSliderNextButton' And Setting TabIndex Attribute Of It To -1
     if (currentIndexOfSlider === 4) {
         firstSectRightSideSliderNextButton.classList.remove('active')
+        firstSectRightSideSliderNextButton.setAttribute('tabIndex', '-1')
     }
-    // Checking If Current Index Of Slider Is 1 Then Remove Class Of 'active' From 'firstSectRightSideSliderPrevButton'
+    // Checking If Current Index Of Slider Is 1 Then Remove Class Of 'active' From 'firstSectRightSideSliderPrevButton' And Setting TabIndex Attribute Of It To -1
     else if (currentIndexOfSlider === 1) {
         firstSectRightSideSliderPrevButton.classList.remove('active')
+        firstSectRightSideSliderPrevButton.setAttribute('tabIndex', '-1')
     }
-    // else if Current Index Of Slider Was Not 4 Or 1 Then Add Class Of 'active' To Prev And Next Buttons
+    // else if Current Index Of Slider Was Not 4 Or 1 Then Add Class Of 'active' To Prev And Next Buttons And Setting TabIndex Attribute Of Them To 1
     else {
         firstSectRightSideSliderNextButton.classList.add('active')
         firstSectRightSideSliderPrevButton.classList.add('active')
+
+        firstSectRightSideSliderNextButton.setAttribute('tabIndex', '1')
+        firstSectRightSideSliderPrevButton.setAttribute('tabIndex', '1')
     }
 })

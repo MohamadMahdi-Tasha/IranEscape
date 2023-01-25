@@ -41,7 +41,7 @@ body:last-child {
 .first-sect-right-side-slider .pagination-holder {bottom: 0;margin-bottom: 20px;margin-right: 20px;z-index: 2;gap: 8px;background-color: rgba(43, 45, 66, 0.5);}
 .pagination-item:not(.active){background-color: #8689B0;}
 .pagination-item.active{background-color: var(--my-red);}
-.pagination-item {width: 8px;height: 8px;transition: .6s;}
+.pagination-item {width: 8px;height: 8px;transition: .3s;}
 .fs-16px {font-size: 16px;}
 .fs-10px {font-size: 10px;}
 .fs-12px {font-size: 12px;}
@@ -88,6 +88,6 @@ body:last-child {
 }
 
 /*Hover,Active, ...*/
-.first-sect-left-side-slider .icons-btn:hover ~ .icons-title-hover{transform: translateY(-20px);opacity: 1;}
+.first-sect-left-side-slider .icons-btn:is(:hover, :active, :focus) ~ .icons-title-hover{transform: translateY(-20px);opacity: 1;}
 
 /*Media Query's*/

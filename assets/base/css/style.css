@@ -31,6 +31,23 @@ body:last-child {
 /*Styles*/
 :not(.ff-iran-sans-fa-num) {font-family: IRANSansX, sans-serif !important;}
 .ff-iran-sans-fa-num {font-family: IRANSansFaNum, sans-serif !important;}
+.first-sect-right-side-slider .swiper-wrapper{height: 500px;}
+.first-sect-right-side-slider .swiper-slide {border-radius: 5px;}
+.first-sect-right-side-slider .prev-slide-btn {left: 0;margin-left: 20px;}
+.first-sect-right-side-slider .next-slide-btn {right: 0;margin-right: 20px;}
+.first-sect-right-side-slider :is(.prev-slide-btn, .next-slide-btn).active {background-color: rgba(43, 45, 66, 0.5);}
+.first-sect-right-side-slider :is(.prev-slide-btn, .next-slide-btn):not(.active) {background-color: transparent;}
+.first-sect-right-side-slider .pagination-holder {bottom: 0;margin-bottom: 20px;margin-right: 20px;z-index: 2;gap: 8px;background-color: rgba(43, 45, 66, 0.5);}
+.first-sect-right-side-slider .pagination-item:not(.active){background-color: #8689B0;}
+.first-sect-right-side-slider .pagination-item.active{background-color: var(--my-red);}
+.first-sect-right-side-slider .pagination-item {width: 8px;height: 8px;transition: .3s;}
+
+.first-sect-right-side-slider :is(.prev-slide-btn, .next-slide-btn) {
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+}
 
 /*Hover,Active, ...*/
 /*Media Query's*/

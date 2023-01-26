@@ -48,19 +48,68 @@ body:last-child {
 .fs-14px {font-size: 14px;}
 .fs-20px {font-size: 20px;}
 .fs-22px {font-size: 22px;}
+.fs-24px {font-size: 22px;}
+.text-my-yellow {color: var(--my-yellow);}
 .fs-8px {font-size: 8px;}
 .px-4-py-2 {padding: 4px 8px;}
 .gap-8px {gap: 8px;}
 .first-sect-left-side-slider .swiper-slide {background-color: #222435;border-radius: 8px}
 .text-my-black-5 {color: var(--my-black-5);}
 .bg-my-black-5 {background-color: var(--my-black-5);}
-.first-sect-left-side-slider .tags-btn, .bg-light-color {background-color: var(--my-tag-btn-bg-color);}
+.tags-btn, .bg-light-color {background-color: var(--my-tag-btn-bg-color);}
 .text-my-red {color: var(--my-red);}
 .bg-my-red {background-color: var(--my-red);}
 .rounded-8px {border-radius: 8px;}
 .bg-darkest-color {background-color: #1B1D2E;}
+.text-my-light {color: #FFE0B8;}
+.second-section-features-holder {bottom: 0;transform: translateY(50%);}
+.second-section-left-top {border-bottom: 1px solid #53567F;}
+.my-card-img {height: 165px;border-radius: 8px;object-fit: cover}
 
-.first-sect-left-side-slider .icons-title-hover {
+.offer-percent {
+    color: #2B2D42;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--my-yellow);
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    font-family: IRANSansFaNum, sans-serif !important;
+    transform: translateY(-50%) translateX(50%);
+}
+
+.my-card {
+    position: relative;
+    background-color: #2B2D42;
+    border: 1px solid #53567F;
+    border-radius: 16px;
+}
+
+.my-btn {
+    font-weight: 500;
+    font-size: 14px;
+    color: #E1E2EB;
+    border: 1px solid #676C9C;
+    padding: 8px 16px;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+.second-section-left-top-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--my-yellow);
+    bottom: 0;
+    right: 0;
+    transform: translateY(15px);
+}
+
+.icons-title-hover {
     background-color: var(--my-gunmetal);
     padding: 2px 4px;
     border-radius: 4px;
@@ -87,7 +136,14 @@ body:last-child {
     transition: .3s;
 }
 
+.second-section {
+    background-color: #1E1F2F;
+    background-image: url('../img/home/second-section/img-bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
 /*Hover,Active, ...*/
-.first-sect-left-side-slider .icons-btn:is(:hover, :active, :focus) ~ .icons-title-hover{transform: translateY(-20px);opacity: 1;}
+.icons-btn:is(:hover, :active, :focus) ~ .icons-title-hover{transform: translateY(-20px);opacity: 1;}
 
 /*Media Query's*/

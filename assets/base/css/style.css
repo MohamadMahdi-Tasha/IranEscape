@@ -147,3 +147,4 @@ body:last-child {
 .icons-btn:is(:hover, :active, :focus) ~ .icons-title-hover{transform: translateY(-20px);opacity: 1;}
 
 /*Media Query's*/
+@media (max-width: 991px) {  .my-card-img {height: auto;}  }

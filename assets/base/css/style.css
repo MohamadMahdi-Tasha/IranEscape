@@ -3,3 +3,5 @@
 /*Importing Css Files*/
 @import "font-sizes.css";
 @import "variables.css";
+@import "../font/IranSans(FaNum)/font.css";
+@import "../font/iransSansX/font.css";

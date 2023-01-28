@@ -7,7 +7,7 @@
 @import "../font/iransSansX/font.css";
 
 /*Default Styles*/
-a {text-decoration: none;}
+a {text-decoration: none !important;}
 button {transition: .3s;}
 ul,ol,li {padding: 0 !important;margin: 0 !important;}
 img {pointer-events: none;}
@@ -17,7 +17,92 @@ body {background-color: var(--my-gunmetal) !important;}
 body:last-child {margin-bottom: 500vh;}
 
 /*Styles*/
-.my-ff-iranSansNum {font-family: IRANSansFaNum, sans-serif !important;}
 :not(.my-ff-iranSansNum) {font-family: IRANSansX, sans-serif !important;}
 
-/**/
+.my-ff-iranSansNum {font-family: IRANSansFaNum, sans-serif !important;}
+.my-g-40px {gap: 40px}
+.my-border-1-my-dark-blue-gray {border: 1px solid var(--my-dark-blue-gray);}
+.my-px-5-10 {padding: 5px 10px;}
+.my-rounded-8px {border-radius: 8px;}
+.my-text-yellow-orange {color: var(--my-yeloow-orange);}
+.my-text-cadet-blue {color: var(--my-cadet-blue);}
+
+.header-link:not(.active) {color: white;}
+.header-link.active {color: var(--my-desire);position: relative;}
+.header-search-btn-inner-holder {width: 130px;height: 65px;}
+.sign-in-holder {height: 100px;padding-right: 5rem;}
+
+header {
+    background-color: var(--my-american-blue);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    height: 100px;
+    border-bottom: 1px solid rgba(103, 108, 156, .5);
+}
+
+.header-links-holder {
+    background-image: url('../img/header/img-links-bg.png');
+    width: 700px;
+    height: 100px;
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-inline: 60px;
+    z-index: 2;
+}
+
+.header-focus-menu {
+    background-color: var(--my-desire);
+    width: 200px;
+    top: 100%;
+    transform: translateY(10%);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.header-search-btn-holder {
+    background-image: url('../img/header/img-search-btn-bg.png');
+    width: 700px;
+    height: 100px;
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    transform: translateY(-50px);
+    left: -30px;
+}
+
+/*Before And After Pseudo Classes*/
+.header-link.active::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--my-desire);
+    top: 0;
+    right: 0;
+    transform: translateY(-23px);
+}
+
+.header-focus-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--my-desire);
+}
+
+/*Hover, Active, ...*/
+.header-focus-menu-toggler svg {transition: .3s;}
+.header-focus-menu-toggler:focus svg {transform: rotate(180deg)}
+.header-focus-menu-toggler:focus ~ .header-focus-menu {
+    opacity: 1;
+    pointer-events: visible;
+}

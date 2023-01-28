@@ -5,3 +5,19 @@
 @import "variables.css";
 @import "../font/IranSans(FaNum)/font.css";
 @import "../font/iransSansX/font.css";
+
+/*Default Styles*/
+a {text-decoration: none;}
+button {transition: .3s;}
+ul,ol,li {padding: 0 !important;margin: 0 !important;}
+img {pointer-events: none;}
+body {background-color: var(--my-gunmetal) !important;}
+
+/*For Debugging*/
+body:last-child {margin-bottom: 500vh;}
+
+/*Styles*/
+.my-ff-iranSansNum {font-family: IRANSansFaNum, sans-serif !important;}
+:not(.my-ff-iranSansNum) {font-family: IRANSansX, sans-serif !important;}
+
+/**/

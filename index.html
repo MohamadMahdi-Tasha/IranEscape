@@ -203,6 +203,20 @@
         return persianName;
     }
 
+    function englishNameFromPersianName(persianName) {
+        let englishName;
+
+        switch (persianName) {
+            case 'تهران': englishName = 'tehran';break;
+            case 'شیراز': englishName = 'shiraz';break;
+            case 'اصفهان': englishName = 'esfahan';break;
+            case 'مشهد': englishName = 'mashhad';break;
+            case 'رشت': englishName = 'rasht';break;
+        }
+
+        return englishName;
+    }
+
     window.addEventListener('load', () => {
         if (selectedCityInLocalStoarge === null) {localStorage.setItem('selectedCity', 'tehran')}
 

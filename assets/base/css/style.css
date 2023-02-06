@@ -20,7 +20,7 @@ body:last-child {margin-bottom: 500vh;}
 :not(.my-ff-iranSansNum) {font-family: IRANSansX, sans-serif !important;}
 
 .my-ff-iranSansNum {font-family: IRANSansFaNum, sans-serif !important;}
-.my-g-40px {gap: 40px}
+.my-g-40px {gap: 40px;}
 .my-border-1-my-dark-blue-gray {border: 1px solid var(--my-dark-blue-gray);}
 .my-px-5-10 {padding: 5px 10px;}
 .my-rounded-8px {border-radius: 8px;}
@@ -31,6 +31,14 @@ body:last-child {margin-bottom: 500vh;}
 .header-link.active {color: var(--my-desire);position: relative;}
 .header-search-btn-inner-holder {width: 130px;height: 65px;}
 .sign-in-holder {height: 100px;padding-right: 5rem;}
+
+.mobile-nav-toggler {
+    background-color: transparent;
+    border: 1px solid var(--my-desire);
+    color: var(--my-desire);
+    width: 50px;
+    height: 50px;
+}
 
 header {
     background-color: var(--my-american-blue);
@@ -101,6 +109,7 @@ header {
 
 /*Hover, Active, ...*/
 .header-focus-menu-toggler svg {transition: .3s;}
+.mobile-nav-toggler:hover {background-color: var(--my-desire);color: white;}
 .header-focus-menu-toggler:focus svg {transform: rotate(180deg)}
 .header-focus-menu-toggler:focus ~ .header-focus-menu {
     opacity: 1;
@@ -109,3 +118,12 @@ header {
 
 /*Media Querys*/
 @media (max-width: 1399px) {  .header-search-btn-holder {left: -80px;}  }
+@media (max-width: 991px) {
+    header {height: auto;}
+    .header-links-holder {
+        width: auto;
+        height: auto;
+        background-image: none;
+        padding-inline: 0;
+    }
+}

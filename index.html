@@ -156,5 +156,13 @@
 </section>
 <script src="assets/base/js/script.js"></script>
 <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
+<script>
+    const mobileNavToggler = document.querySelector('.mobile-nav-toggler');
+    const mobileNavHolder = document.querySelector('.mobile-nav-holder');
+    const mobileNavBg = document.querySelector('.mobile-nav-bg');
+
+    mobileNavToggler.addEventListener('click', () => mobileNavHolder.toggleAttribute('data-opened'))
+    mobileNavBg.addEventListener('click', () => mobileNavHolder.removeAttribute('data-opened'))
+</script>
 </body>
 </html>

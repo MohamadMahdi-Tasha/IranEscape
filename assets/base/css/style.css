@@ -33,17 +33,34 @@ body:last-child {margin-bottom: 500vh;}
 .mobile-nav {background-color: var(--my-yeloow-orange);z-index: 5;}
 .mobile-nav-link {color: white;}
 .mobile-nav-link.active {color: var(--my-desire);font-weight: bold;}
-.mobile-nav-bg {background-color: rgba(0,0,0,.4);z-index: 4;}
+.mobile-nav-bg,.my-modal-bg {background-color: rgba(0,0,0,.4);z-index: 4;}
 .mobile-nav-holder:not([data-opened]) {pointer-events: none;}
 .mobile-nav-holder[data-opened] {pointer-events: visible;}
 .mobile-nav-holder:not([data-opened]) > .mobile-nav{right: -75% !important;}
 .mobile-nav-holder[data-opened] > .mobile-nav{right: 0 !important;}
 .mobile-nav-holder:not([data-opened]) > .mobile-nav-bg {opacity: 0;}
 .mobile-nav-holder[data-opened] > .mobile-nav-bg {opacity: 1;}
+.my-modal {background-color: var(--my-desire);z-index: 5;}
+.select-city-buttons-holder  {height: 150px;}
+.select-city-buttons-holder::-webkit-scrollbar {width: 5px;background-color: white;border-radius: 50rem}
+.select-city-buttons-holder::-webkit-scrollbar-thumb {background-color: var(--my-yeloow-orange);border-radius: 50rem}
+.select-city-btn:not(.active) {background-color: white;}
+.select-city-btn.active {background-color: var(--my-yeloow-orange);color: white;}
+
+.modal-close-btn {
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--my-yeloow-orange);
+    color: var(--my-yeloow-orange);
+}
 
 .mobile-nav-holder,
 .mobile-nav-holder > .mobile-nav-bg,
-.mobile-nav-holder > .mobile-nav {
+.mobile-nav-holder > .mobile-nav,
+.my-modal-holder,
+.my-modal-holder > .my-modal-bg,
+.my-modal-holder > .my-modal{
     transition-property: all;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: .6s;
@@ -138,6 +155,7 @@ header {
 /*Hover, Active, ...*/
 .header-focus-menu-toggler svg {transition: .3s;}
 .mobile-nav-toggler:hover {background-color: var(--my-desire);color: white;}
+.modal-close-btn:hover {background-color: var(--my-yeloow-orange);color: white;}
 .header-focus-menu-toggler:focus svg {transform: rotate(180deg)}
 .header-focus-menu-toggler:focus ~ .header-focus-menu {
     opacity: 1;

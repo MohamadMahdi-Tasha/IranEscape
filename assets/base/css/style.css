@@ -106,3 +106,6 @@ header {
     opacity: 1;
     pointer-events: visible;
 }
+
+/*Media Querys*/
+@media (max-width: 1399px) {  .header-search-btn-holder {left: -80px;}  }

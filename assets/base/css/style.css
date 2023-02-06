@@ -32,6 +32,11 @@ body:last-child {margin-bottom: 500vh;}
 .header-search-btn-inner-holder {width: 130px;height: 65px;}
 .sign-in-holder {height: 100px;padding-right: 5rem;}
 
+.mobile-nav {
+    background-color: var(--my-desire);
+    height: 100%;
+}
+
 .mobile-nav-toggler {
     background-color: transparent;
     border: 1px solid var(--my-desire);

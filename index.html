@@ -190,6 +190,14 @@
     const mobileNavBg = document.querySelector('.mobile-nav-bg');
     const headerSearchBtnInnerHolder = document.querySelector('.header-search-btn-inner-holder');
 
+    const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
+
+    window.addEventListener('load', () => {
+        if (selectedCityInLocalStoarge === null) {
+            localStorage.setItem('selectedCity', 'tehran')
+        }
+    })
+
     mobileNavToggler.addEventListener('click', () => mobileNavHolder.toggleAttribute('data-opened'))
     mobileNavBg.addEventListener('click', () => mobileNavHolder.removeAttribute('data-opened'))
     headerSearchBtnInnerHolder.addEventListener('click', () => {

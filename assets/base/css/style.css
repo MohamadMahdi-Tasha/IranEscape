@@ -26,15 +26,19 @@ body:last-child {margin-bottom: 500vh;}
 .my-rounded-8px {border-radius: 8px;}
 .my-text-yellow-orange {color: var(--my-yeloow-orange);}
 .my-text-cadet-blue {color: var(--my-cadet-blue);}
-
 .header-link:not(.active) {color: white;}
 .header-link.active {color: var(--my-desire);position: relative;}
 .header-search-btn-inner-holder {width: 130px;height: 65px;}
 .sign-in-holder {height: 100px;padding-right: 5rem;}
-
-.mobile-nav {
-    background-color: var(--my-desire);
-    height: 100%;
+.mobile-nav {background-color: var(--my-yeloow-orange);z-index: 5;}
+.mobile-nav-link {color: white;}
+.mobile-nav-link.active {color: var(--my-desire);font-weight: bold;}
+.search-input-in-mobile-nav {
+}
+.mobile-nav-bg {
+    background-color: rgba(0,0,0,.4);
+    backdrop-filter: blur(20px);
+    z-index: 4;
 }
 
 .mobile-nav-toggler {
@@ -110,6 +114,17 @@ header {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid var(--my-desire);
+}
+
+.mobile-nav-link.active:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    top: 50%;
+    left: 99%;
+    transform: translateY(-50%);
+    background-color: var(--my-desire);
 }
 
 /*Hover, Active, ...*/

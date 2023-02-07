@@ -23,62 +23,64 @@
     <title>ایران اسکیپ</title>
 </head>
 <body dir="rtl">
-<!--Select City Modal-->
-<div class="my-modal__holder my-modal__holder--select-city d-flex justify-content-center align-items-center position-absolute h-100 w-100">
-    <div class="my-modal__bg position-absolute w-100 h-100"></div>
-    <div class="my-modal position-absolute rounded-3 shadow p-3 w-50">
-        <button class="my-modal__close-btn d-block rounded-3 mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-            </svg>
-        </button>
-        <input type="text" class="my-modal__search-input col-12 rounded-3 text-white px-3 py-2 mb-3 d-block" placeholder="شهر مورد نظر خود را در اینجا وارد کنید...">
-        <div class="select-city__buttons-holder overflow-auto ps-1">
-            <ul class="list-unstyled">
-                <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn select-city__btn--active">تهران</button></li>
-                <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">شیراز</button></li>
-                <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">اصفهان</button></li>
-                <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">مشهد</button></li>
-                <li><button class="col-12 text-end px-3 rounded-3 py-2 border-0 select-city__btn">رشت</button></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!--Mobile Nav-->
-<nav class="mobile-nav__holder d-lg-none d-block">
-    <!--Background Dark Layout-->
-    <div class="position-absolute mobile-nav__bg w-100 h-100"></div>
-    <!--Main Content-->
-    <main class="position-absolute h-100 w-75 overflow-auto mobile-nav shadow">
-        <a class="d-block m-3" href="#"><img src="assets/base/img/img-logo-typo.svg" alt="لوگو ایران اسکیپ"></a>
-        <ul class="list-unstyled p-0 m-0">
-            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link mobile-nav__link--active" href="#">صفحه اصلی</a></li>
-            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">اتاق فرار</a></li>
-            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">تماس با ما</a></li>
-            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">وبلاگ</a></li>
-        </ul>
-        <hr class="m-3">
-        <form action="#" class="mx-3 align-items-center"><input class="w-100 px-3 py-2 text-white mobile-nav__search-input rounded-3" required type="search" placeholder="سرچ کنید ."></form>
-        <hr class="m-3">
-        <div class="mx-3">
-            <a class="mb-3 d-block" href="#">
-                <button class="bg-transparent border px-3 py-2 col-12 text-end text-white fw-normal my-fs-14 my-rounded-8px" tabindex="-1">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.99935 8.50016C5.88602 8.50016 4.16602 6.78016 4.16602 4.66683C4.16602 2.5535 5.88602 0.833496 7.99935 0.833496C10.1127 0.833496 11.8327 2.5535 11.8327 4.66683C11.8327 6.78016 10.1127 8.50016 7.99935 8.50016ZM7.99935 1.8335C6.43935 1.8335 5.16602 3.10683 5.16602 4.66683C5.16602 6.22683 6.43935 7.50016 7.99935 7.50016C9.55935 7.50016 10.8327 6.22683 10.8327 4.66683C10.8327 3.10683 9.55935 1.8335 7.99935 1.8335Z" fill="#fff"/>
-                        <path d="M13.7268 15.1667C13.4534 15.1667 13.2268 14.94 13.2268 14.6667C13.2268 12.3667 10.8801 10.5 8.0001 10.5C5.1201 10.5 2.77344 12.3667 2.77344 14.6667C2.77344 14.94 2.54677 15.1667 2.27344 15.1667C2.0001 15.1667 1.77344 14.94 1.77344 14.6667C1.77344 11.82 4.56677 9.5 8.0001 9.5C11.4334 9.5 14.2268 11.82 14.2268 14.6667C14.2268 14.94 14.0001 15.1667 13.7268 15.1667Z" fill="#fff"/>
-                    </svg>
-                    ورود/ثبت نام
-                </button>
-            </a>
-            <a class="text-white my-fs-18" href="tel:02191301612">
-                <span>تلفن پشتیبانی :</span>
-                <span class="my-ff-iranSansNum" dir="ltr">021-91301612</span>
-            </a>
-        </div>
-    </main>
-</nav>
 <!--Header-->
 <header>
+    <!--Select City Modal-->
+    <div role="dialog" class="my-modal__holder my-modal__holder--select-city d-flex justify-content-center align-items-center position-absolute h-100 w-100">
+        <div class="my-modal__bg position-absolute w-100 h-100"></div>
+        <div class="my-modal position-absolute rounded-3 shadow p-3 w-50">
+            <button class="my-modal__close-btn d-block rounded-3 mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <input type="text" class="my-modal__search-input col-12 rounded-3 text-white px-3 py-2 mb-3 d-block" placeholder="شهر مورد نظر خود را در اینجا وارد کنید...">
+            <div class="select-city__buttons-holder overflow-auto ps-1">
+                <ul class="list-unstyled select-city__buttons-list-orignial">
+                    <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn select-city__btn--active">تهران</button></li>
+                    <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">شیراز</button></li>
+                    <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">اصفهان</button></li>
+                    <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">مشهد</button></li>
+                    <li><button class="col-12 text-end px-3 rounded-3 py-2 border-0 select-city__btn">رشت</button></li>
+                </ul>
+                <ul class="list-unstyled select-city__buttons-list-fake d-none"></ul>
+            </div>
+        </div>
+    </div>
+    <!--Mobile Nav-->
+    <nav class="mobile-nav__holder d-lg-none d-block">
+        <!--Background Dark Layout-->
+        <div class="position-absolute mobile-nav__bg w-100 h-100"></div>
+        <!--Main Content-->
+        <main class="position-absolute h-100 w-75 overflow-auto mobile-nav shadow">
+            <a class="d-block m-3" href="#"><img src="assets/base/img/img-logo-typo.svg" alt="لوگو ایران اسکیپ"></a>
+            <ul class="list-unstyled p-0 m-0">
+                <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link mobile-nav__link--active" href="#">صفحه اصلی</a></li>
+                <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">اتاق فرار</a></li>
+                <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">تماس با ما</a></li>
+                <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">وبلاگ</a></li>
+            </ul>
+            <hr class="m-3">
+            <form action="#" class="mx-3 align-items-center"><input class="w-100 px-3 py-2 text-white mobile-nav__search-input rounded-3" required type="search" placeholder="سرچ کنید ."></form>
+            <hr class="m-3">
+            <div class="mx-3">
+                <a class="mb-3 d-block" href="#">
+                    <button class="bg-transparent border px-3 py-2 col-12 text-end text-white fw-normal my-fs-14 my-rounded-8px" tabindex="-1">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.99935 8.50016C5.88602 8.50016 4.16602 6.78016 4.16602 4.66683C4.16602 2.5535 5.88602 0.833496 7.99935 0.833496C10.1127 0.833496 11.8327 2.5535 11.8327 4.66683C11.8327 6.78016 10.1127 8.50016 7.99935 8.50016ZM7.99935 1.8335C6.43935 1.8335 5.16602 3.10683 5.16602 4.66683C5.16602 6.22683 6.43935 7.50016 7.99935 7.50016C9.55935 7.50016 10.8327 6.22683 10.8327 4.66683C10.8327 3.10683 9.55935 1.8335 7.99935 1.8335Z" fill="#fff"/>
+                            <path d="M13.7268 15.1667C13.4534 15.1667 13.2268 14.94 13.2268 14.6667C13.2268 12.3667 10.8801 10.5 8.0001 10.5C5.1201 10.5 2.77344 12.3667 2.77344 14.6667C2.77344 14.94 2.54677 15.1667 2.27344 15.1667C2.0001 15.1667 1.77344 14.94 1.77344 14.6667C1.77344 11.82 4.56677 9.5 8.0001 9.5C11.4334 9.5 14.2268 11.82 14.2268 14.6667C14.2268 14.94 14.0001 15.1667 13.7268 15.1667Z" fill="#fff"/>
+                        </svg>
+                        ورود/ثبت نام
+                    </button>
+                </a>
+                <a class="text-white my-fs-18" href="tel:02191301612">
+                    <span>تلفن پشتیبانی :</span>
+                    <span class="my-ff-iranSansNum" dir="ltr">021-91301612</span>
+                </a>
+            </div>
+        </main>
+    </nav>
+    <!--Main Content-->
     <div class="container-lg d-flex align-items-center justify-content-xxl-between justify-content-lg-start justify-content-between p-lg-0 p-3">
         <div class="d-flex ms-xxl-0 ms-lg-5 ms-3">
             <button class="mobile-nav-toggler rounded-3 d-lg-none d-flex align-items-center justify-content-center">
@@ -170,6 +172,8 @@
 <script src="assets/base/js/script.js"></script>
 <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
 <script>
+    // TODO:Fix Color OF Inputs When Not Foucsed
+    // TODO:ADD Script For Escape Key On Keyboard
     const mobileNavToggler = document.querySelector('.mobile-nav-toggler');
     const mobileNavHolder = document.querySelector('.mobile-nav__holder');
     const mobileNavBg = document.querySelector('.mobile-nav__bg');
@@ -181,6 +185,7 @@
     const selectCityModalCloseBtn = document.querySelector('.my-modal__close-btn');
     const selectCityModalBtn = document.querySelectorAll('.select-city__btn');
     const activeSelectCityBtn = document.querySelector('.select-city__btn--active');
+    const selectCitySearchInput = document.querySelector('.my-modal__search-input');
 
     const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
 
@@ -247,6 +252,31 @@
             selectCityModal.classList.remove('my-modal__holder--opened')
             selectedCityTextSpanInHeaderSelectCityBtn.textContent = btn.textContent;
         })
+    })
+    selectCitySearchInput.addEventListener('input', () => {
+        const arrayToShow = [];
+        const btnsListOrginal = document.querySelector('.select-city__buttons-list-orignial');
+        const btnsListFake = document.querySelector('.select-city__buttons-list-fake');
+
+        document.querySelectorAll('.select-city__buttons-list-orignial button').forEach(btn => {if (btn.textContent.startsWith(selectCitySearchInput.value)) {arrayToShow.push(btn);}})
+        if (arrayToShow !== []) {
+            btnsListOrginal.classList.add('d-none');
+            btnsListFake.classList.remove('d-none');
+
+            btnsListFake.childNodes.forEach(child => child.remove());
+            arrayToShow.forEach(item => {
+                const cloneOfItem = item.cloneNode(true);
+                const liItemToAppendCloneToIt = document.createElement('li');
+
+                liItemToAppendCloneToIt.className = 'mb-3';
+                liItemToAppendCloneToIt.appendChild(cloneOfItem);
+                btnsListFake.appendChild(liItemToAppendCloneToIt)
+            })
+
+        } else {
+            btnsListOrginal.classList.remove('d-none');
+            btnsListFake.classList.add('d-none');
+        }
     })
 </script>
 </body>

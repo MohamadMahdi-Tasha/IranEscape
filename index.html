@@ -180,6 +180,7 @@
     const selectCityModalBg = document.querySelector('.my-modal__bg');
     const selectCityModalCloseBtn = document.querySelector('.my-modal__close-btn');
     const selectCityModalBtn = document.querySelectorAll('.select-city__btn');
+    const activeSelectCityBtn = document.querySelector('.select-city__btn--active');
 
     const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
 
@@ -214,9 +215,17 @@
     window.addEventListener('load', () => {
         if (selectedCityInLocalStoarge === null) {
             localStorage.setItem('selectedCity', 'tehran')
-        }
+            selectedCityTextSpanInHeaderSelectCityBtn.textContent = persianNameFromEnglishName(selectedCityInLocalStoarge)
+        } else {
+            let modalBtnToActivate;
 
-        selectedCityTextSpanInHeaderSelectCityBtn.textContent = persianNameFromEnglishName(selectedCityInLocalStoarge)
+            selectCityModalBtn.forEach(item => {if (item.textContent === persianNameFromEnglishName(selectedCityInLocalStoarge)) {modalBtnToActivate = item}})
+            
+            activeSelectCityBtn.classList.remove('select-city__btn--active');
+            modalBtnToActivate.classList.add('select-city__btn--active')
+
+            selectedCityTextSpanInHeaderSelectCityBtn.textContent = persianNameFromEnglishName(selectedCityInLocalStoarge)
+        }
     })
 
     mobileNavToggler.addEventListener('click', () => mobileNavHolder.classList.add('mobile-nav__holder--opened'))
@@ -230,12 +239,10 @@
     selectCityModalCloseBtn.addEventListener('click', () => selectCityModal.classList.remove('my-modal__holder--opened'))
     selectCityModalBtn.forEach(btn => {
         btn.addEventListener('click', () => {
-            const activeSelectCityBtn = document.querySelector('.select-city__btn--active');
-
             localStorage.setItem('selectedCity', englishNameFromPersianName(btn.textContent))
 
-            activeSelectCityBtn.classList.remove('select-city__btn--active');
             btn.classList.add('select-city__btn--active')
+            activeSelectCityBtn.classList.remove('select-city__btn--active');
             selectCityModal.classList.remove('my-modal__holder--opened')
         })
     })

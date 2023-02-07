@@ -40,8 +40,8 @@ body:last-child {margin-bottom: 500vh;}
 .mobile-nav__holder.mobile-nav__holder--opened {pointer-events: visible;}
 .mobile-nav__holder:not(.mobile-nav__holder--opened) > .mobile-nav{right: -75% !important;}
 .mobile-nav__holder.mobile-nav__holder--opened > .mobile-nav{right: 0 !important;}
-.mobile-nav__holder:not(.mobile-nav__holder--opened) > .mobile-nav__bg {opacity: 0;}
-.mobile-nav__holder.mobile-nav__holder--opened > .mobile-nav__bg {opacity: 1;}
+.mobile-nav__holder:not(.mobile-nav__holder--opened) > .mobile-nav__bg {opacity: 0;pointer-events: none}
+.mobile-nav__holder.mobile-nav__holder--opened > .mobile-nav__bg {opacity: 1;pointer-events: visible}
 .my-modal {background-color: var(--my-desire);z-index: 5;}
 .select-city__buttons-holder  {height: 150px;}
 .select-city__buttons-holder::-webkit-scrollbar {width: 5px;background-color: white;border-radius: 50rem}
@@ -49,24 +49,20 @@ body:last-child {margin-bottom: 500vh;}
 .select-city__btn:not(.select-city__btn--active) {background-color: white;}
 .select-city__btn.select-city__btn--active {background-color: var(--my-yeloow-orange);color: white;}
 .my-modal__search-input, .mobile-nav__search-input{background-color: white;transition: .3s;border: 3px solid white;}
-
+.my-modal__holder:not(.my-modal__holder--opened) {pointer-events: none;}
+.my-modal__holder:not(.my-modal__holder--opened) > .my-modal{opacity: 0;transform: scale(.9);pointer-events: none;}
+.my-modal__holder:not(.my-modal__holder--opened) > .my-modal__bg{opacity: 0;pointer-events: none;}
+.my-modal__holder.my-modal__holder--opened > .my-modal{opacity: 1;transform: scale(1);pointer-events: visible;}
+.my-modal__holder.my-modal__holder--opened {pointer-events: visible;}
+.my-modal__holder > *,.mobile-nav__holder > * {transition-property: all;transition-timing-function: cubic-bezier(.4,0,.2,1);}
+.my-modal__holder > * {transition-duration: .3s;}
+.mobile-nav__holder > *{transition-duration: .6s;}
 .my-modal__close-btn {
     background-color: transparent;
     width: 30px;
     height: 30px;
     border: 1px solid var(--my-yeloow-orange);
     color: var(--my-yeloow-orange);
-}
-
-.mobile-nav__holder,
-.mobile-nav__holder > .mobile-nav__bg,
-.mobile-nav__holder > .mobile-nav,
-.my-modal__holder,
-.my-modal__holder > .my-modal__bg,
-.my-modal__holder > .my-modal{
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-duration: .6s;
 }
 
 .mobile-nav-toggler {

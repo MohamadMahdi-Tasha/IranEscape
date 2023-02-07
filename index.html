@@ -45,7 +45,7 @@
     </div>
 </div>
 <!--Mobile Nav-->
-<nav class="mobile-nav__holder mobile-nav__holder--opened d-lg-none d-block  ">
+<nav class="mobile-nav__holder d-lg-none d-block">
     <!--Background Dark Layout-->
     <div class="position-absolute mobile-nav__bg w-100 h-100"></div>
     <!--Main Content-->
@@ -115,12 +115,12 @@
                 <li><a class="header__link fw-normal my-fs-16" href="#">تماس با ما</a></li>
                 <li><a class="header__link fw-normal my-fs-16" href="#">وبلاگ</a></li>
             </ul>
-            <button class="bg-transparent my-border-1-my-dark-blue-gray my-px-5-10 my-rounded-8px header-select-city-btn">
+            <button class="bg-transparent my-border-1-my-dark-blue-gray my-px-5-10 my-rounded-8px header__select-city-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.99992 9.44679C6.57992 9.44679 5.41992 8.29346 5.41992 6.86679C5.41992 5.44012 6.57992 4.29346 7.99992 4.29346C9.41992 4.29346 10.5799 5.44679 10.5799 6.87346C10.5799 8.30012 9.41992 9.44679 7.99992 9.44679ZM7.99992 5.29346C7.13326 5.29346 6.41992 6.00012 6.41992 6.87346C6.41992 7.74679 7.12659 8.45346 7.99992 8.45346C8.87326 8.45346 9.57992 7.74679 9.57992 6.87346C9.57992 6.00012 8.86659 5.29346 7.99992 5.29346Z" fill="#676C9C"/>
                     <path d="M7.99914 15.1735C7.01247 15.1735 6.01914 14.8002 5.24581 14.0602C3.27914 12.1668 1.10581 9.14683 1.92581 5.5535C2.66581 2.2935 5.51247 0.833496 7.99914 0.833496C7.99914 0.833496 7.99914 0.833496 8.00581 0.833496C10.4925 0.833496 13.3391 2.2935 14.0791 5.56016C14.8925 9.1535 12.7191 12.1668 10.7525 14.0602C9.97914 14.8002 8.98581 15.1735 7.99914 15.1735ZM7.99914 1.8335C6.05914 1.8335 3.56581 2.86683 2.90581 5.7735C2.18581 8.9135 4.15914 11.6202 5.94581 13.3335C7.09914 14.4468 8.90581 14.4468 10.0591 13.3335C11.8391 11.6202 13.8125 8.9135 13.1058 5.7735C12.4391 2.86683 9.93914 1.8335 7.99914 1.8335Z" fill="#676C9C"/>
                 </svg>
-                <span class="text-white fw-normal my-fs-14 selected-city-text-span">تهران</span>
+                <span class="text-white fw-normal my-fs-14 header__select-city-txt">تهران</span>
                 <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.99904 6.19993C5.53237 6.19993 5.0657 6.01993 4.71237 5.6666L0.365703 1.31993C0.17237 1.12659 0.17237 0.806595 0.365703 0.613262C0.559036 0.419928 0.879037 0.419928 1.07237 0.613262L5.41904 4.95993C5.73904 5.27993 6.25904 5.27993 6.57904 4.95993L10.9257 0.613262C11.119 0.419928 11.439 0.419928 11.6324 0.613262C11.8257 0.806595 11.8257 1.12659 11.6324 1.31993L7.2857 5.6666C6.93237 6.01993 6.4657 6.19993 5.99904 6.19993Z" fill="#676C9C"/>
                 </svg>
@@ -182,8 +182,8 @@
     const mobileNavHolder = document.querySelector('.mobile-nav__holder');
     const mobileNavBg = document.querySelector('.mobile-nav__bg');
     const headerSearchBtnInnerHolder = document.querySelector('.header__search-btn');
-    const headerSelectCityBtn = document.querySelector('.header-select-city-btn');
-    const selectedCityTextSpanInHeaderSelectCityBtn = headerSelectCityBtn.querySelector('.selected-city-text-span');
+    const headerSelectCityBtn = document.querySelector('.header__select-city-btn');
+    const selectedCityTextSpanInHeaderSelectCityBtn = headerSelectCityBtn.querySelector('.header__select-city-txt');
 
     const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
 
@@ -223,8 +223,8 @@
         selectedCityTextSpanInHeaderSelectCityBtn.textContent = persianNameFromEnglishName(selectedCityInLocalStoarge)
     })
 
-    mobileNavToggler.addEventListener('click', () => mobileNavHolder.toggleAttribute('data-opened'))
-    mobileNavBg.addEventListener('click', () => mobileNavHolder.removeAttribute('data-opened'))
+    mobileNavToggler.addEventListener('click', () => mobileNavHolder.classList.add('data-opened'))
+    mobileNavBg.addEventListener('click', () => mobileNavHolder.classList.remove('data-opened'))
     headerSearchBtnInnerHolder.addEventListener('click', () => {
 
     })

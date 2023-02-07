@@ -32,10 +32,10 @@
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
             </svg>
         </button>
-        <input type="text" class="select-city-modal-inner-input col-12 bg-white rounded-3 px-3 py-2 border-0 mb-3 d-block" placeholder="شهر مورد نظر خود را در اینجا وارد کنید...">
+        <input type="text" class="my-modal__search-input col-12 rounded-3 text-white px-3 py-2 mb-3 d-block" placeholder="شهر مورد نظر خود را در اینجا وارد کنید...">
         <div class="select-city__buttons-holder overflow-auto ps-1">
             <ul class="list-unstyled">
-                <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn header__link--active">تهران</button></li>
+                <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn select-city__btn--active">تهران</button></li>
                 <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">شیراز</button></li>
                 <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">اصفهان</button></li>
                 <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">مشهد</button></li>
@@ -45,16 +45,16 @@
     </div>
 </div>
 <!--Mobile Nav-->
-<nav class="mobile-nav__holder d-lg-none d-block">
+<nav class="mobile-nav__holder mobile-nav__holder--opened d-lg-none d-block  ">
     <!--Background Dark Layout-->
     <div class="position-absolute mobile-nav__bg w-100 h-100"></div>
     <!--Main Content-->
     <main class="position-absolute h-100 w-75 overflow-auto mobile-nav shadow">
         <a class="d-block m-3" href="#"><img src="assets/base/img/img-logo-typo.svg" alt="لوگو ایران اسکیپ"></a>
         <ul class="list-unstyled p-0 m-0">
-            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav-link active" class="text-white" href="#">صفحه اصلی</a></li>
-            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav-link" class="text-white" href="#">اتاق فرار</a></li>
-            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav-link" class="text-white" href="#">تماس با ما</a></li>
+            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link mobile-nav__link--active" href="#">صفحه اصلی</a></li>
+            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">اتاق فرار</a></li>
+            <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">تماس با ما</a></li>
             <li><a class="d-block col-12 px-3 py-2 position-relative mobile-nav__link" href="#">وبلاگ</a></li>
         </ul>
         <hr class="m-3">

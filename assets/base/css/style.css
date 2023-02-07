@@ -12,6 +12,7 @@ button {transition: .3s;}
 ul,ol,li {padding: 0 !important;margin: 0 !important;}
 img {pointer-events: none;}
 body {background-color: var(--my-gunmetal) !important;}
+input {outline: none}
 
 /*For Debugging*/
 body:last-child {margin-bottom: 500vh;}
@@ -33,20 +34,21 @@ body:last-child {margin-bottom: 500vh;}
 .header__sign-in-holder {height: 100px;padding-right: 5rem;}
 .mobile-nav {background-color: var(--my-yeloow-orange);z-index: 5;}
 .mobile-nav__link {color: white;}
-.mobile-nav__link.header__link--active {color: var(--my-desire);font-weight: bold;}
+.mobile-nav__link.mobile-nav__link--opened {color: var(--my-desire);font-weight: bold;}
 .mobile-nav__bg,.my-modal__bg {background-color: rgba(0,0,0,.4);z-index: 4;}
-.mobile-nav__holder:not([data-opened]) {pointer-events: none;}
-.mobile-nav__holder[data-opened] {pointer-events: visible;}
-.mobile-nav__holder:not([data-opened]) > .mobile-nav{right: -75% !important;}
-.mobile-nav__holder[data-opened] > .mobile-nav{right: 0 !important;}
-.mobile-nav__holder:not([data-opened]) > .mobile-nav__bg {opacity: 0;}
-.mobile-nav__holder[data-opened] > .mobile-nav__bg {opacity: 1;}
+.mobile-nav__holder:not(.mobile-nav__holder--opened) {pointer-events: none;}
+.mobile-nav__holder.mobile-nav__holder--opened {pointer-events: visible;}
+.mobile-nav__holder:not(.mobile-nav__holder--opened) > .mobile-nav{right: -75% !important;}
+.mobile-nav__holder.mobile-nav__holder--opened > .mobile-nav{right: 0 !important;}
+.mobile-nav__holder:not(.mobile-nav__holder--opened) > .mobile-nav__bg {opacity: 0;}
+.mobile-nav__holder.mobile-nav__holder--opened > .mobile-nav__bg {opacity: 1;}
 .my-modal {background-color: var(--my-desire);z-index: 5;}
 .select-city__buttons-holder  {height: 150px;}
 .select-city__buttons-holder::-webkit-scrollbar {width: 5px;background-color: white;border-radius: 50rem}
 .select-city__buttons-holder::-webkit-scrollbar-thumb {background-color: var(--my-yeloow-orange);border-radius: 50rem}
-.select-city__btn:not(.header__link--active) {background-color: white;}
-.select-city__btn.header__link--active {background-color: var(--my-yeloow-orange);color: white;}
+.select-city__btn:not(.select-city__btn--active) {background-color: white;}
+.select-city__btn.select-city__btn--active {background-color: var(--my-yeloow-orange);color: white;}
+.my-modal__search-input {background-color: white;transition: .3s;border: 3px solid white;}
 
 .my-modal__close-btn {
     background-color: transparent;
@@ -142,7 +144,7 @@ header {
     border-bottom: 10px solid var(--my-desire);
 }
 
-.mobile-nav__link.header__link--active:before {
+.mobile-nav__link.mobile-nav__link--active:before {
     content: '';
     position: absolute;
     width: 50%;
@@ -158,10 +160,8 @@ header {
 .mobile-nav-toggler:hover {background-color: var(--my-desire);color: white;}
 .my-modal__close-btn:hover {background-color: var(--my-yeloow-orange);color: white;}
 .header-focus-menu-toggler:focus svg {transform: rotate(180deg)}
-.header-focus-menu-toggler:focus ~ .header__focus-menu {
-    opacity: 1;
-    pointer-events: visible;
-}
+.header-focus-menu-toggler:focus ~ .header__focus-menu {opacity: 1;pointer-events: visible;}
+.my-modal__search-input:focus {background-color: var(--my-yeloow-orange);border-color: var(--my-american-blue)}
 
 /*Media Querys*/
 @media (max-width: 1399px) {  .header__search-btn-holder {left: -80px;}  }

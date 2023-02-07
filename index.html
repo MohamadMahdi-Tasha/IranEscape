@@ -24,7 +24,7 @@
 </head>
 <body dir="rtl">
 <!--Select City Modal-->
-<div class="my-modal__holder d-flex justify-content-center align-items-center position-absolute h-100 w-100">
+<div class="my-modal__holder my-modal__holder--select-city d-flex justify-content-center align-items-center position-absolute h-100 w-100">
     <div class="my-modal__bg position-absolute w-100 h-100"></div>
     <div class="my-modal position-absolute rounded-3 shadow p-3 w-50">
         <button class="my-modal__close-btn d-block rounded-3 mb-3">
@@ -45,7 +45,7 @@
     </div>
 </div>
 <!--Mobile Nav-->
-<nav class="mobile-nav__holder d-lg-none d-block mobile-nav__holder--opened">
+<nav class="mobile-nav__holder d-lg-none d-block">
     <!--Background Dark Layout-->
     <div class="position-absolute mobile-nav__bg w-100 h-100"></div>
     <!--Main Content-->
@@ -175,7 +175,9 @@
     const mobileNavBg = document.querySelector('.mobile-nav__bg');
     const headerSearchBtnInnerHolder = document.querySelector('.header__search-btn');
     const headerSelectCityBtn = document.querySelector('.header__select-city-btn');
-    const selectedCityTextSpanInHeaderSelectCityBtn = headerSelectCityBtn.querySelector('.header__select-city-txt');
+    const selectedCityTextSpanInHeaderSelectCityBtn = document.querySelector('.header__select-city-txt');
+    const selectCityModal = document.querySelector('.my-modal__holder--select-city');
+    const selectCityModalBg = document.querySelector('.my-modal__bg');
 
     const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
 
@@ -220,9 +222,17 @@
     headerSearchBtnInnerHolder.addEventListener('click', () => {
 
     })
-    headerSelectCityBtn.addEventListener('click', () => {
 
-    })
+    headerSelectCityBtn.addEventListener('click', () => selectCityModal.classList.add('my-modal__holder--opened'))
+    selectCityModalBg.addEventListener('click', () => selectCityModal.classList.remove('my-modal__holder--opened'))
+
+    // const activeSelectCityBtn = document.querySelector('.select-city__btn--active');
+    //
+    // item.addEventListener('click', () => {
+    //     localStorage.setItem('selectedCity', englishNameFromPersianName(item.textContent))
+    //     activeSelectCityBtn.classList.remove('select-city__btn--active');
+    //     item.classList.add('select-city__btn--active')
+    // })
 </script>
 </body>
 </html>

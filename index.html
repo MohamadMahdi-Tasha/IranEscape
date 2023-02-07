@@ -220,7 +220,7 @@
             let modalBtnToActivate;
 
             selectCityModalBtn.forEach(item => {if (item.textContent === persianNameFromEnglishName(selectedCityInLocalStoarge)) {modalBtnToActivate = item}})
-            
+
             activeSelectCityBtn.classList.remove('select-city__btn--active');
             modalBtnToActivate.classList.add('select-city__btn--active')
 
@@ -228,15 +228,16 @@
         }
     })
 
-    mobileNavToggler.addEventListener('click', () => mobileNavHolder.classList.add('mobile-nav__holder--opened'))
-    mobileNavBg.addEventListener('click', () => mobileNavHolder.classList.remove('mobile-nav__holder--opened'))
+    mobileNavToggler.addEventListener('click', () => {mobileNavHolder.classList.add('mobile-nav__holder--opened');document.body.classList.add('overflow-hidden');})
+    mobileNavBg.addEventListener('click', () => {mobileNavHolder.classList.remove('mobile-nav__holder--opened');document.body.classList.remove('overflow-hidden');})
+
     headerSearchBtnInnerHolder.addEventListener('click', () => {
 
     })
 
-    headerSelectCityBtn.addEventListener('click', () => selectCityModal.classList.add('my-modal__holder--opened'))
-    selectCityModalBg.addEventListener('click', () => selectCityModal.classList.remove('my-modal__holder--opened'))
-    selectCityModalCloseBtn.addEventListener('click', () => selectCityModal.classList.remove('my-modal__holder--opened'))
+    headerSelectCityBtn.addEventListener('click', () => {selectCityModal.classList.add('my-modal__holder--opened');document.body.classList.add('overflow-hidden');})
+    selectCityModalBg.addEventListener('click', () => {selectCityModal.classList.remove('my-modal__holder--opened');document.body.classList.remove('overflow-hidden');})
+    selectCityModalCloseBtn.addEventListener('click', () => {selectCityModal.classList.remove('my-modal__holder--opened');document.body.classList.remove('overflow-hidden');})
     selectCityModalBtn.forEach(btn => {
         btn.addEventListener('click', () => {
             localStorage.setItem('selectedCity', englishNameFromPersianName(btn.textContent))

@@ -178,6 +178,7 @@
     const selectedCityTextSpanInHeaderSelectCityBtn = document.querySelector('.header__select-city-txt');
     const selectCityModal = document.querySelector('.my-modal__holder--select-city');
     const selectCityModalBg = document.querySelector('.my-modal__bg');
+    const selectCityModalCloseBtn = document.querySelector('.my-modal__close-btn');
 
     const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
 
@@ -225,6 +226,7 @@
 
     headerSelectCityBtn.addEventListener('click', () => selectCityModal.classList.add('my-modal__holder--opened'))
     selectCityModalBg.addEventListener('click', () => selectCityModal.classList.remove('my-modal__holder--opened'))
+    selectCityModalCloseBtn.addEventListener('click', () => selectCityModal.classList.remove('my-modal__holder--opened'))
 
     // const activeSelectCityBtn = document.querySelector('.select-city__btn--active');
     //

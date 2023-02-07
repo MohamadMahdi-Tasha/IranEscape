@@ -179,6 +179,7 @@
     const selectCityModal = document.querySelector('.my-modal__holder--select-city');
     const selectCityModalBg = document.querySelector('.my-modal__bg');
     const selectCityModalCloseBtn = document.querySelector('.my-modal__close-btn');
+    const selectCityModalBtn = document.querySelectorAll('.select-city__btn');
 
     const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
 
@@ -227,14 +228,17 @@
     headerSelectCityBtn.addEventListener('click', () => selectCityModal.classList.add('my-modal__holder--opened'))
     selectCityModalBg.addEventListener('click', () => selectCityModal.classList.remove('my-modal__holder--opened'))
     selectCityModalCloseBtn.addEventListener('click', () => selectCityModal.classList.remove('my-modal__holder--opened'))
+    selectCityModalBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const activeSelectCityBtn = document.querySelector('.select-city__btn--active');
 
-    // const activeSelectCityBtn = document.querySelector('.select-city__btn--active');
-    //
-    // item.addEventListener('click', () => {
-    //     localStorage.setItem('selectedCity', englishNameFromPersianName(item.textContent))
-    //     activeSelectCityBtn.classList.remove('select-city__btn--active');
-    //     item.classList.add('select-city__btn--active')
-    // })
+            localStorage.setItem('selectedCity', englishNameFromPersianName(btn.textContent))
+
+            activeSelectCityBtn.classList.remove('select-city__btn--active');
+            btn.classList.add('select-city__btn--active')
+            selectCityModal.classList.remove('my-modal__holder--opened')
+        })
+    })
 </script>
 </body>
 </html>

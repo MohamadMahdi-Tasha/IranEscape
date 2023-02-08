@@ -66,6 +66,48 @@ body:last-child {margin-bottom: 500vh;}
 .header__main-content--search .header__search-input{opacity: 1;}
 .header__main-content:not(.header__main-content--search) .header__search-input{opacity: 0;}
 .header__main-content--search .header__search-btn-inner-holder{margin-left: 30px;}
+.first-sect-right-slider__slide-img {height: 500px;object-fit: cover;}
+.first-sect-right-slider__prev-slide-btn {transform: translateY(-50%) translateX(-2.5rem);right: 0;}
+.first-sect-right-slider__next-slide-btn {transform: translateY(-50%) translateX(2.5rem);left: 0;}
+.first-sect-right-slider__next-slide-btn--active, .first-sect-right-slider__prev-slide-btn--active {background-color: rgba(43, 45, 66, .5);}
+.first-sect-right-slider__next-slide-btn:not(.first-sect-right-slider__next-slide-btn--active),
+.first-sect-right-slider__prev-slide-btn:not(.first-sect-right-slider__prev-slide-btn--active){background-color: transparent;}
+.first-sect-right-slider__pagination-item:not(.first-sect-right-slider__pagination-item--active) {background-color: var(--my-cadet-blue);}
+.first-sect-right-slider__pagination-item--active {background-color: var(--my-desire);}
+.first-sect-right-slider__pagination-item {width: 8px;height: 8px;}
+.first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(1) {background-image: url('../img/first-section/right-side/bottom-side/img-1.jpg');}
+.first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(2) {background-image: url('../img/first-section/right-side/bottom-side/img-2.jpg');}
+.first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(3) {background-image: url('../img/first-section/right-side/bottom-side/img-3.jpg');}
+
+.first-sect-right-bottom__title-in-bg  {
+    top: 40%;
+    right: -5%;
+    color: transparent;
+    -webkit-text-stroke: .5px rgba(255, 255, 255, .1);
+    user-select: none;
+}
+
+.first-sect-right-bottom__item {
+    width: calc(100% / 3);
+    height: 130px;
+    background-position: center;
+    background-size: cover;
+}
+
+.first-sect-right-slider__pagination {
+    background-color: rgba(43, 45, 66, .8);
+    bottom: 0;
+    right: 0;
+    transform: translateX(-2.5rem) translateY(-2.5rem);
+    z-index: 1000;
+}
+
+.first-sect-right-slider__prev-slide-btn, .first-sect-right-slider__next-slide-btn {
+    top: 50%;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+}
 
 .my-modal__close-btn {
     background-color: transparent;

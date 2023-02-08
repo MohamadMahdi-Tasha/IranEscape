@@ -54,10 +54,20 @@ body:last-child {margin-bottom: 500vh;}
 .my-modal__holder:not(.my-modal__holder--opened) > .my-modal__bg{opacity: 0;pointer-events: none;}
 .my-modal__holder.my-modal__holder--opened > .my-modal{opacity: 1;transform: scale(1);pointer-events: visible;}
 .my-modal__holder.my-modal__holder--opened {pointer-events: visible;}
-.my-modal__holder > *,.mobile-nav__holder > * {transition-property: all;transition-timing-function: cubic-bezier(.4,0,.2,1);}
+.my-modal__holder > *,.mobile-nav__holder > *, .header__search-btn-holder,
+.header__search-input{transition-property: all;transition-timing-function: cubic-bezier(.4,0,.2,1);}
 .my-modal__holder > * {transition-duration: .3s;}
-.mobile-nav__holder > *{transition-duration: .6s;}
+.header__search-btn-inner-holder {transition: .3s}
+.mobile-nav__holder > *, .header__search-btn-holder, .header__search-input{transition-duration: .6s;}
 :is(.select-city__buttons-list-orignial, .select-city__buttons-list-fake) > li:not(:last-of-type){margin-bottom: 1rem !important;}
+.header__search-input::placeholder {color: white;}
+.header__main-content--search  .header__select-city-btn {display: none !important;}
+.header__main-content .header__search-btn-holder input {width: 140px;}
+.header__main-content--search .header__search-btn {width: 50px;}
+.header__main-content--search .header__search-input{opacity: 1;}
+.header__main-content:not(.header__main-content--search) .header__search-input{opacity: 0;}
+.header__main-content--search .header__search-btn-inner-holder{margin-left: 30px;}
+
 .my-modal__close-btn {
     background-color: transparent;
     width: 30px;

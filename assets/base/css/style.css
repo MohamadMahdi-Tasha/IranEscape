@@ -48,15 +48,15 @@ body:last-child {margin-bottom: 500vh;}
 .select-city__buttons-holder::-webkit-scrollbar-thumb {background-color: var(--my-yeloow-orange);border-radius: 50rem}
 .select-city__btn:not(.select-city__btn--active) {background-color: white;}
 .select-city__btn.select-city__btn--active {background-color: var(--my-yeloow-orange);color: white;}
-.my-modal__search-input, .mobile-nav__search-input{background-color: white;transition: .3s;border: 3px solid white;}
+.my-modal__search-input, .mobile-nav__search-input{background-color: white;transition: .3s;border: 3px solid white;color: var(--my-yeloow-orange);}
 .my-modal__holder:not(.my-modal__holder--opened) {pointer-events: none;}
-.my-modal__holder:not(.my-modal__holder--opened) > .my-modal{opacity: 0;transform: scale(.9);pointer-events: none;}
+.my-modal__holder:not(.my-modal__holder--opened) > .my-modal{opacity: 0;transform: scale(.97);pointer-events: none;}
 .my-modal__holder:not(.my-modal__holder--opened) > .my-modal__bg{opacity: 0;pointer-events: none;}
 .my-modal__holder.my-modal__holder--opened > .my-modal{opacity: 1;transform: scale(1);pointer-events: visible;}
 .my-modal__holder.my-modal__holder--opened {pointer-events: visible;}
 .my-modal__holder > *,.mobile-nav__holder > *, .header__search-btn-holder,
 .header__search-input{transition-property: all;transition-timing-function: cubic-bezier(.4,0,.2,1);}
-.my-modal__holder > * {transition-duration: .3s;}
+.my-modal__holder > * {transition-duration: .2s;}
 .header__search-btn-inner-holder {transition: .3s}
 .mobile-nav__holder > *, .header__search-btn-holder, .header__search-input{transition-duration: .6s;}
 :is(.select-city__buttons-list-orignial, .select-city__buttons-list-fake) > li:not(:last-of-type){margin-bottom: 1rem !important;}
@@ -156,8 +156,8 @@ header {
     width: 50%;
     height: 2px;
     top: 50%;
-    left: 99%;
-    transform: translateY(-50%);
+    left: 100%;
+    transform: translateY(-50%) translateX(-10px);
     background-color: var(--my-desire);
 }
 
@@ -167,8 +167,8 @@ header {
 .my-modal__close-btn:hover {background-color: var(--my-yeloow-orange);color: white;}
 .header-focus-menu-toggler:focus svg {transform: rotate(180deg)}
 .header-focus-menu-toggler:focus ~ .header__focus-menu {opacity: 1;pointer-events: visible;}
-.my-modal__search-input:focus {background-color: var(--my-yeloow-orange);border-color: var(--my-american-blue)}
-.mobile-nav__search-input:focus {background-color: var(--my-desire);border-color: var(--my-american-blue)}
+.my-modal__search-input:focus {background-color: var(--my-yeloow-orange);border-color: var(--my-american-blue);color: white;}
+.mobile-nav__search-input:focus {background-color: var(--my-desire);border-color: var(--my-american-blue);color: white;}
 
 /*Media Querys*/
 @media (min-width: 1399px) {  .header__main-content--search .header__search-btn-holder {left: -150px;}  }

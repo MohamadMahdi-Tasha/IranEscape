@@ -57,6 +57,7 @@ body:last-child {margin-bottom: 500vh;}
 .my-modal__holder > *,.mobile-nav__holder > * {transition-property: all;transition-timing-function: cubic-bezier(.4,0,.2,1);}
 .my-modal__holder > * {transition-duration: .3s;}
 .mobile-nav__holder > *{transition-duration: .6s;}
+:is(.select-city__buttons-list-orignial, .select-city__buttons-list-fake) > li:not(:last-of-type){margin-bottom: 1rem !important;}
 .my-modal__close-btn {
     background-color: transparent;
     width: 30px;

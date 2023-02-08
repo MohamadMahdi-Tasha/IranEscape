@@ -37,10 +37,10 @@
             <input type="text" class="my-modal__search-input col-12 rounded-3 text-white px-3 py-2 mb-3 d-block" placeholder="شهر مورد نظر خود را در اینجا وارد کنید...">
             <div class="select-city__buttons-holder overflow-auto ps-1">
                 <ul class="list-unstyled select-city__buttons-list-orignial">
-                    <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn select-city__btn--active">تهران</button></li>
-                    <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">شیراز</button></li>
-                    <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">اصفهان</button></li>
-                    <li class="mb-3"><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">مشهد</button></li>
+                    <li><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn select-city__btn--active">تهران</button></li>
+                    <li><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">شیراز</button></li>
+                    <li><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">اصفهان</button></li>
+                    <li><button class="col-12 rounded-3 text-end px-3 py-2 border-0 select-city__btn">مشهد</button></li>
                     <li><button class="col-12 text-end px-3 rounded-3 py-2 border-0 select-city__btn">رشت</button></li>
                 </ul>
                 <ul class="list-unstyled select-city__buttons-list-fake d-none"></ul>
@@ -186,6 +186,8 @@
     const selectCityModalBtn = document.querySelectorAll('.select-city__btn');
     const activeSelectCityBtn = document.querySelector('.select-city__btn--active');
     const selectCitySearchInput = document.querySelector('.my-modal__search-input');
+    const selectCityBtnsListOrginal = document.querySelector('.select-city__buttons-list-orignial');
+    const selectCityBtnsListFake = document.querySelector('.select-city__buttons-list-fake');
 
     const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
 
@@ -217,6 +219,15 @@
         return englishName;
     }
 
+    function selectCityModalButtonsAction(btn) {
+        localStorage.setItem('selectedCity', englishNameFromPersianName(btn.textContent))
+
+        btn.classList.add('select-city__btn--active')
+        activeSelectCityBtn.classList.remove('select-city__btn--active');
+        selectCityModal.classList.remove('my-modal__holder--opened')
+        selectedCityTextSpanInHeaderSelectCityBtn.textContent = btn.textContent;
+    }
+
     window.addEventListener('load', () => {
         if (selectedCityInLocalStoarge === null) {
             localStorage.setItem('selectedCity', 'tehran')
@@ -235,6 +246,35 @@
 
     mobileNavToggler.addEventListener('click', () => {mobileNavHolder.classList.add('mobile-nav__holder--opened');document.body.classList.add('overflow-hidden');})
     mobileNavBg.addEventListener('click', () => {mobileNavHolder.classList.remove('mobile-nav__holder--opened');document.body.classList.remove('overflow-hidden');})
+    selectCitySearchInput.addEventListener('input', () => {
+        const arrayToShow = [];
+
+        selectCityBtnsListOrginal.classList.add('d-none');
+        selectCityBtnsListFake.classList.remove('d-none');
+
+        selectCityBtnsListFake.childNodes.forEach(item => item.remove())
+
+        if (selectCitySearchInput.value !== '') {
+            document.querySelectorAll('.select-city__buttons-list-orignial button').forEach(btn => {
+                if (btn.textContent.startsWith(selectCitySearchInput.value)) {
+                    arrayToShow.push(btn);
+                }
+            })
+
+            arrayToShow.forEach(btn => {
+                const createdLi = document.createElement('li');
+                const clonedBtn = btn.cloneNode(true);
+
+                clonedBtn.setAttribute('onclick', 'selectCityModalButtonsAction(this)')
+
+                createdLi.appendChild(clonedBtn);
+                selectCityBtnsListFake.appendChild(createdLi);
+            })
+        } else {
+            selectCityBtnsListOrginal.classList.remove('d-none');
+            selectCityBtnsListFake.classList.add('d-none');
+        }
+    })
 
     headerSearchBtnInnerHolder.addEventListener('click', () => {
 
@@ -243,41 +283,7 @@
     headerSelectCityBtn.addEventListener('click', () => {selectCityModal.classList.add('my-modal__holder--opened');document.body.classList.add('overflow-hidden');})
     selectCityModalBg.addEventListener('click', () => {selectCityModal.classList.remove('my-modal__holder--opened');document.body.classList.remove('overflow-hidden');})
     selectCityModalCloseBtn.addEventListener('click', () => {selectCityModal.classList.remove('my-modal__holder--opened');document.body.classList.remove('overflow-hidden');})
-    selectCityModalBtn.forEach(btn => {
-        btn.addEventListener('click', () => {
-            localStorage.setItem('selectedCity', englishNameFromPersianName(btn.textContent))
-
-            btn.classList.add('select-city__btn--active')
-            activeSelectCityBtn.classList.remove('select-city__btn--active');
-            selectCityModal.classList.remove('my-modal__holder--opened')
-            selectedCityTextSpanInHeaderSelectCityBtn.textContent = btn.textContent;
-        })
-    })
-    selectCitySearchInput.addEventListener('input', () => {
-        const arrayToShow = [];
-        const btnsListOrginal = document.querySelector('.select-city__buttons-list-orignial');
-        const btnsListFake = document.querySelector('.select-city__buttons-list-fake');
-
-        document.querySelectorAll('.select-city__buttons-list-orignial button').forEach(btn => {if (btn.textContent.startsWith(selectCitySearchInput.value)) {arrayToShow.push(btn);}})
-        if (arrayToShow !== []) {
-            btnsListOrginal.classList.add('d-none');
-            btnsListFake.classList.remove('d-none');
-
-            btnsListFake.childNodes.forEach(child => child.remove());
-            arrayToShow.forEach(item => {
-                const cloneOfItem = item.cloneNode(true);
-                const liItemToAppendCloneToIt = document.createElement('li');
-
-                liItemToAppendCloneToIt.className = 'mb-3';
-                liItemToAppendCloneToIt.appendChild(cloneOfItem);
-                btnsListFake.appendChild(liItemToAppendCloneToIt)
-            })
-
-        } else {
-            btnsListOrginal.classList.remove('d-none');
-            btnsListFake.classList.add('d-none');
-        }
-    })
+    selectCityModalBtn.forEach(btn => btn.addEventListener('click', () => selectCityModalButtonsAction(btn)))
 </script>
 </body>
 </html>

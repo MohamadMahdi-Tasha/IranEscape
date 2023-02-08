@@ -81,7 +81,7 @@
         </main>
     </nav>
     <!--Main Content-->
-    <div class="container-lg d-flex align-items-center justify-content-xxl-between justify-content-lg-start justify-content-between p-lg-0 p-3">
+    <div class="container-lg d-flex align-items-center justify-content-xxl-between justify-content-lg-start justify-content-between p-lg-0 p-3 header__main-content">
         <div class="d-flex ms-xxl-0 ms-lg-5 ms-3">
             <button class="mobile-nav-toggler rounded-3 d-lg-none d-flex align-items-center justify-content-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -188,6 +188,7 @@
     const selectCitySearchInput = document.querySelector('.my-modal__search-input');
     const selectCityBtnsListOrginal = document.querySelector('.select-city__buttons-list-orignial');
     const selectCityBtnsListFake = document.querySelector('.select-city__buttons-list-fake');
+    const headerMainContent = document.querySelector('.header__main-content');
 
     const selectedCityInLocalStoarge = localStorage.getItem('selectedCity');
 
@@ -244,6 +245,7 @@
         }
     })
 
+    headerSearchBtnInnerHolder.addEventListener('click', () => headerMainContent.classList.toggle('header__main-content--search'))
     mobileNavToggler.addEventListener('click', () => {mobileNavHolder.classList.add('mobile-nav__holder--opened');document.body.classList.add('overflow-hidden');})
     mobileNavBg.addEventListener('click', () => {mobileNavHolder.classList.remove('mobile-nav__holder--opened');document.body.classList.remove('overflow-hidden');})
     selectCitySearchInput.addEventListener('input', () => {
@@ -275,11 +277,6 @@
             selectCityBtnsListFake.classList.add('d-none');
         }
     })
-
-    headerSearchBtnInnerHolder.addEventListener('click', () => {
-
-    })
-
     headerSelectCityBtn.addEventListener('click', () => {selectCityModal.classList.add('my-modal__holder--opened');document.body.classList.add('overflow-hidden');})
     selectCityModalBg.addEventListener('click', () => {selectCityModal.classList.remove('my-modal__holder--opened');document.body.classList.remove('overflow-hidden');})
     selectCityModalCloseBtn.addEventListener('click', () => {selectCityModal.classList.remove('my-modal__holder--opened');document.body.classList.remove('overflow-hidden');})

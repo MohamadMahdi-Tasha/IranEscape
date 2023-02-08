@@ -173,7 +173,6 @@
 <script src="assets/base/js/script.js"></script>
 <script src="assets/plugins/bootstrap/bootstrap.bundle.min.js"></script>
 <script>
-    // TODO:Fix Color OF Inputs When Not Foucsed
     // TODO:ADD Script For Escape Key On Keyboard
     const mobileNavToggler = document.querySelector('.mobile-nav-toggler');
     const mobileNavHolder = document.querySelector('.mobile-nav__holder');
@@ -243,6 +242,15 @@
             modalBtnToActivate.classList.add('select-city__btn--active')
 
             selectedCityTextSpanInHeaderSelectCityBtn.textContent = persianNameFromEnglishName(selectedCityInLocalStoarge)
+        }
+    })
+
+    window.addEventListener('keydown', (event) => {
+        const clickedKey = event.key.toLowerCase();
+
+        if (clickedKey === 'escape') {
+            if (mobileNavHolder.classList.contains('mobile-nav__holder--opened')) {mobileNavHolder.classList.remove('mobile-nav__holder--opened')}
+            if (selectCityModal.classList.contains('my-modal__holder--opened')) {selectCityModal.classList.remove('my-modal__holder--opened')}
         }
     })
 

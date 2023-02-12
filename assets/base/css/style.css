@@ -74,11 +74,12 @@ body:last-child {margin-bottom: 500vh;}
 .first-sect-right-slider__prev-slide-btn:not(.first-sect-right-slider__prev-slide-btn--active){background-color: transparent;}
 .first-sect-right-slider__pagination-item:not(.first-sect-right-slider__pagination-item--active),
 .first-sect-left-slider__pagination-item:not(.first-sect-left-slider__pagination-item--active),
-.second-section__pagination-item:not(.second-section__pagination-item--active){background-color: var(--my-cadet-blue);}
+.second-section__pagination-item:not(.second-section__pagination-item--active),
+.third-section__pagination-item:not(.third-section__pagination-item--active){background-color: var(--my-cadet-blue);}
 .first-sect-right-slider__pagination-item--active, .first-sect-left-slider__pagination-item--active,
-.second-section__pagination-item--active{background-color: var(--my-desire);}
+.second-section__pagination-item--active, .third-section__pagination-item--active{background-color: var(--my-desire);}
 .first-sect-right-slider__pagination-item, .first-sect-left-slider__pagination-item,
-.second-section__pagination-item{width: 8px;height: 8px;transition: .3s}
+.second-section__pagination-item, .third-section__pagination-item{width: 8px;height: 8px;transition: .3s}
 .first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(1) {background-image: url('../img/first-section/right-side/bottom-side/img-1.jpg');}
 .first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(2) {background-image: url('../img/first-section/right-side/bottom-side/img-2.jpg');}
 .first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(3) {background-image: url('../img/first-section/right-side/bottom-side/img-3.jpg');}
@@ -93,7 +94,7 @@ body:last-child {margin-bottom: 500vh;}
 .first-sect-left-slider__reserve-btn-holder {background-color: #191925;}
 .first-sect-left-slider__reserve-btn, .second-section__reserve-btn  {background-color: var(--my-desire);}
 .first-sect-left-slider__next-prev-btn-pagination-holder,
-.second-section__pagination{background-color: var(--my-american-blue);}
+.second-section__pagination, .third-section__pagination{background-color: var(--my-american-blue);}
 .second-section__2part-item {background-color: var(--my-american-blue);}
 .second-section__buttons-holder {transform: translateY(-100%);}
 .second-section__2part-item-left-top{border-bottom: 1px solid var(--my-dark-blue-gray);}

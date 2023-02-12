@@ -75,7 +75,7 @@ body:last-child {margin-bottom: 500vh;}
 .first-sect-right-slider__pagination-item:not(.first-sect-right-slider__pagination-item--active),
 .first-sect-left-slider__pagination-item:not(.first-sect-left-slider__pagination-item--active) {background-color: var(--my-cadet-blue);}
 .first-sect-right-slider__pagination-item--active, .first-sect-left-slider__pagination-item--active {background-color: var(--my-desire);}
-.first-sect-right-slider__pagination-item, .first-sect-left-slider__pagination-item{width: 8px;height: 8px;}
+.first-sect-right-slider__pagination-item, .first-sect-left-slider__pagination-item{width: 8px;height: 8px;transition: .3s}
 .first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(1) {background-image: url('../img/first-section/right-side/bottom-side/img-1.jpg');}
 .first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(2) {background-image: url('../img/first-section/right-side/bottom-side/img-2.jpg');}
 .first-sect-right-bottom__items-holder > .first-sect-right-bottom__item:nth-of-type(3) {background-image: url('../img/first-section/right-side/bottom-side/img-3.jpg');}
@@ -114,7 +114,7 @@ body:last-child {margin-bottom: 500vh;}
 
 .first-sect-right-bottom__item {
     width: calc(100% / 3);
-    height: 130px;
+    height: 165px;
     background-position: center;
     background-size: cover;
 }

@@ -107,6 +107,12 @@ body:last-child {margin-bottom: 500vh;}
 .second-section__left-item {width: 58.33333333%}
 .third-section__next-btn {left: 0;transform: translateX(-50%) translateY(-50%);}
 .third-section__prev-btn {right: 0;transform: translateX(50%) translateY(-50%);}
+.third-section__bottom-item {
+    background-image: url('../img/third-section/img-bottom-items.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+}
 
 .third-section__prev-btn, .third-section__next-btn {
     width: 25px;

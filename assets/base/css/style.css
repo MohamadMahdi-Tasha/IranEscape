@@ -98,7 +98,7 @@ body:last-child {margin-bottom: 500vh;}
 .second-section__buttons-holder {transform: translateY(-100%);}
 .second-section__2part-item-left-top{border-bottom: 1px solid var(--my-dark-blue-gray);}
 .second-section__deleted-price {bottom: 100%;right: 0;}
-.second-section__grid-holder {grid-template-columns: repeat(2, 1fr);gap: 2rem;}
+.second-section__grid-holder {grid-template-columns: repeat(2, 1fr);gap: 1rem;}
 .second-section__right-item {width:41.66666667%}
 .second-section__left-item {width: 58.33333333%}
 

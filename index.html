@@ -5561,18 +5561,6 @@
 <script src="assets/base/js/first-section-scripts.js"></script>
 <script src="assets/base/js/second-section-scripts.js"></script>
 <script src="assets/base/js/third-section-scripts.js"></script>
-<script>
-    // Variable
-    const fifthSectionQaItemTogglers = document.querySelectorAll('.fifth-section__qa-item-toggler');
-
-    // Adding Event Listener Of Click To Each Qa Item Toggler That Toggles Class Of 'fifth-section__qa-item--opened' To Item Of Toggler
-    fifthSectionQaItemTogglers.forEach(toggler => {
-        toggler.addEventListener('click', () => {
-            const togglerItem = toggler.parentElement;
-
-            togglerItem.classList.toggle('fifth-section__qa-item--opened')
-        })
-    })
-</script>
+<script src="assets/base/js/fifth-section-scripts.js"></script>
 </body>
 </html>

@@ -107,6 +107,7 @@ body:last-child {margin-bottom: 500vh;}
 .second-section__left-item {width: 58.33333333%}
 .third-section__next-btn {left: 0;transform: translateX(-50%) translateY(-50%);}
 .third-section__prev-btn {right: 0;transform: translateX(50%) translateY(-50%);}
+.fourth-section {background-color: #191925;}
 .third-section__bottom-item {
     background-image: url('../img/third-section/img-bottom-items.jpg');
     background-position: center;

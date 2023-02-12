@@ -7,9 +7,17 @@ const thirdSectionSlider = new Swiper('.third-section__slider', {
     spaceBetween: 25,
     slidesPerView: 4,
     slidesPerGroup: 4,
-    autoplay: {
-        delay: 3000,
-    },
+    autoplay: {delay: 3000,},
+    breakpoints: {
+        991: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+        },
+        1: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+        }
+    }
 })
 
 // Adding Event Listener On Each Next And Prev Slide That Slides To Next Or Prev Slide

@@ -356,6 +356,8 @@ header {
 @media (max-width: 991px) {
     header {height: auto;}
     .second-section__grid-holder {grid-template-columns: repeat(1, 1fr);}
+    .fifth-section {background-size: 70%;}
+    .third-section__bottom-items-holder .w-50 {width: 100% !important;}
 
     .header__links-holder {
         width: auto;

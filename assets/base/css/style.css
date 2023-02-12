@@ -18,9 +18,6 @@ body {
     overflow-x: hidden;
 }
 
-/*For Debugging*/
-body:last-child {margin-bottom: 500vh;}
-
 /*Styles*/
 :not(.my-ff-iranSansNum) {font-family: IRANSansX, sans-serif !important;}
 

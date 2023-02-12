@@ -107,7 +107,7 @@ body:last-child {margin-bottom: 500vh;}
 .second-section__left-item {width: 58.33333333%}
 .third-section__next-btn {left: 0;transform: translateX(-50%) translateY(-50%);}
 .third-section__prev-btn {right: 0;transform: translateX(50%) translateY(-50%);}
-.fourth-section {background-color: #191925;}
+.fourth-section, .footer__bottom-side {background-color: #191925;}
 .fifth-section__qa-item {background-color: var(--my-american-blue);}
 .fifth-section__qa-item-toggler {height: 50px;transition: .3s}
 .fifth-section__qa-item ,.fifth-section__qa-plus-sign {transition: .3s}
@@ -116,6 +116,16 @@ body:last-child {margin-bottom: 500vh;}
 .fifth-section__qa-item.fifth-section__qa-item--opened .fifth-section__qa-item-toggler > .fifth-section__qa-plus-sign {transform: rotate(45deg);}
 .fifth-section__qa-item .fifth-section__qa-item-toggler > .fifth-section__qa-plus-sign {transform: rotate(0);}
 .fifth-section__qa-item.fifth-section__qa-item--opened .fifth-section__qa-item-content {overflow: auto;height: 100px;}
+footer {background-color: var(--my-american-blue);}
+.footer__main-list-item-top-side {border-bottom: 1px dashed var(--my-cadet-blue);}
+.my-text-green {color: green;}
+.my-text-red {color: red;}
+
+.footer__top-side {
+    background-color: #191925;
+    top: 0;
+    transform: translateY(-50%);
+}
 
 .fifth-section {
     background-image: url(../img/img-logo.svg);
@@ -332,6 +342,37 @@ header {
     pointer-events: none;
 }
 
+.footer__top-side::before, .footer__top-side::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+.footer__top-side::before {
+    left: 0;
+    transform: translateY(-50%) translateX(-70%);
+    background-image: url(../img/footer/img-left-top-side.png);
+}
+
+.footer__top-side::after {
+    right: 0;
+    transform: translateY(-50%) translateX(70%);
+    background-image: url(../img/footer/img-right-top-side.png);
+}
+
+.footer__Main-list-item-title::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    top: 140%;
+    right: 0;
+    background-color: var(--my-yeloow-orange);
+}
+
 /*Hover, Active, ...*/
 .header-focus-menu-toggler svg {transition: .3s;}
 .mobile-nav-toggler:hover {background-color: var(--my-desire);color: white;}
@@ -358,7 +399,7 @@ header {
     .second-section__grid-holder {grid-template-columns: repeat(1, 1fr);}
     .fifth-section {background-size: 70%;}
     .third-section__bottom-items-holder .w-50 {width: 100% !important;}
-
+    .footer__top-side::before, .footer__top-side::after {display: none;}
     .header__links-holder {
         width: auto;
         height: auto;

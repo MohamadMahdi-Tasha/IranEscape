@@ -95,6 +95,13 @@ body:last-child {margin-bottom: 500vh;}
 .first-sect-left-slider__next-prev-btn-pagination-holder,
 .second-section__pagination{background-color: var(--my-american-blue);}
 
+.second-section {
+    background-color: #222231;
+    background-image: url(../img/second-section/img-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
 .first-sect-left-slider__18-btn, .first-sect-left-slider__suggested-btn {
     width: 40px;
     height: 40px;
